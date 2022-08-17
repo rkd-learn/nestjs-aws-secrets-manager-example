@@ -1,8 +1,13 @@
-name: check package
-on:
-  schedule:
-    - cron: '* * * * *'
-    # - cron: '0 */3 * * *'
+name: check nestjs-aws-secrets-manager npm package
+# on:
+#   schedule:
+#     - cron: '* * * * *'
+#     # - cron: '0 */3 * * *'
+
+on: push
+#   push:
+#      branches:
+#       - main
 
 jobs:
   build:
