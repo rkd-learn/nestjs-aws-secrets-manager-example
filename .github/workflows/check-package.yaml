@@ -1,0 +1,19 @@
+name: check package
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+
+jobs:
+  build:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set Node.js 16
+      uses: actions/setup-node@v1
+      with:
+        version: 16.x
+    - run: npm i nestjs-aws-secrets-manager
