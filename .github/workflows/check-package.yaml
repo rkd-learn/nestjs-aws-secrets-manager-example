@@ -1,7 +1,8 @@
 name: check package
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '* * * * *'
+    # - cron: '0 */3 * * *'
 
 jobs:
   build:
