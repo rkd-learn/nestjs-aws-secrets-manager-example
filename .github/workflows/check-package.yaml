@@ -1,13 +1,10 @@
 name: check nestjs-aws-secrets-manager npm package
-# on:
-#   schedule:
-#     - cron: '* * * * *'
-#     # - cron: '0 */3 * * *'
-
-on: push
-#   push:
-#      branches:
-#       - main
+on:
+  schedule:
+    - cron: '0 */5 * * *'  # every 5 hr
+  push:
+     branches:
+      - main
 
 jobs:
   build:
@@ -23,3 +20,4 @@ jobs:
       with:
         version: 16.x
     - run: npm i nestjs-aws-secrets-manager
+      name: Check npm 
