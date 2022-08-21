@@ -1,7 +1,7 @@
 name: check nestjs-aws-secrets-manager npm package
 on:
-  schedule:
-    - cron: '0 */5 * * *'  # every 5 hr
+#   schedule:
+#     - cron: '0 */5 * * *'  # every 5 hr
   push:
      branches:
       - main
